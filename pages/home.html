@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyle.css">
+    <script src="/assets/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="register.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg></a></li>
+        </ul>
+        <ul>
+            <li ><img src="/assets/LEGO_logo.svg.png" alt="" id="LEGO"></li>
+            <li class="hideOnMobile"><a href="#"><u>Home</u></a></li>
+            <li class="hideOnMobile"><a href="products.html">Products</a></li>
+            <li class="hideOnMobile"><a href="#">Movies</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li><a href="register.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg></a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a></li>
+        </ul>
+    </nav>
+
+    <section class="slider-container">
+        <div class="slider-images">
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 162910.jpg" alt="">
+                <h1 class="slider-name">Polaroid</h1>
+                <div class="details">
+                    <h2>Polaroid OneStep SX-70 </h2>
+                    <p>Camera</p>
+                </div>
+            </div>
+
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 172110.jpg" alt="">
+                <h1 class="slider-name">PAC-MAN</h1>
+                <div class="details">
+                    <h2>PAC-MAN</h2>
+                    <p>Arcade</p>
+                </div>
+            </div>
+
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 172435.jpg" alt="">
+                <h1 class="slider-name">Bouqet</h1>
+                <div class="details">
+                    <h2>Bouqet</h2>
+                    <p>of Roses</p>
+                </div>
+            </div>
+
+            <div class="slider-img active">
+                <img src="/assets/Screenshot 2024-02-11 172925.jpg" alt="">
+                <h1 class="slider-name">Nya</h1>
+                <div class="details">
+                    <h2>Nya's Dragon</h2>
+                    <p>Power Spinjitzu Drift</p>
+                </div>
+            </div>
+
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 173214.jpg" alt="">
+                <h1 class="slider-name">Avenger</h1>
+                <div class="details">
+                    <h2>Avengers</h2>
+                    <p>Avengers Tower</p>
+                </div>
+            </div>
+
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 173354.jpg" alt="">
+                <h1 class="slider-name">R2-D2™</h1>
+                <div class="details">
+                    <h2>R2-D2™</h2>
+                    <p>R2-D2™ Robot</p>
+                </div>
+            </div>
+
+            <div class="slider-img">
+                <img src="/assets/Screenshot 2024-02-11 173800.jpg" alt="">
+                <h1 class="slider-name">Andrea's</h1>
+                <div class="details">
+                    <h2>Andrea's</h2>
+                    <p>Modern Mansion</p>
+                </div>
+            </div>
+
+        </div>
+       
+    </section>
+
+    <div id="particle">
+
+        <section class="home">
+            <div class="home-content">
+                <h2>The Ultimate Lego</h2>
+                <h3>Expert!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptas facilis. Ut enim debitis dolor dolorem libero quis est ullam voluptate. Vitae omnis expedita magnam maiores eos, tenetur laborum recusandae?</p>
+                <a href="#" class="btn-to-product">Explore Legos!</a>
+            </div>
+
+            <div class="home-img">
+                <div class="rhombus">
+                    <img src="/assets/70841_Benny_Mugshot_HighQuality.png" alt="" id="Benny">
+                </div>
+            </div>
+
+            <div class="rhombus2"></div>
+
+        </section>
+
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+
+    </div>
+
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="" class="footerIcon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="footerIcon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" class="footerIcon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="footerIcon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="" >Home</a></li>
+                <li><a href="" class=>Movies</a></li>
+                <li><a href="" >About</a></li>
+                <li><a href="" >Contact</a></li>
+                <li><a href="" >Products</a></li>
+            </ul>
+        </div>
+        
+        <div class="footerBottom">
+            <p>Copyright &copy;2024  <span class="designer">
+                LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online. LEGO, the LEGO logo, the Minifigure, DUPLO, the FRIENDS logo, the MINIFIGURES logo, DREAMZzz, NINJAGO, VIDIYO and MINDSTORMS are trademarks of the LEGO Group. ©2024 The LEGO Group. All rights reserved. Use of this site signifies your agreement to the Terms of Use.</span></p>
+        </div>
+    </div>
+
+    <script src="homeJs.js"></script>
+
+</body>
+</html>

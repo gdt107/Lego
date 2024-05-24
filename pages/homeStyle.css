@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/assets/impressive-lego-illustration-b8bqn3w4k49rgxwh.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1000px 100px;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+}
+
+nav {
+    position: fixed; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(50px); 
+    z-index: 1; 
+    border-radius: 0%;
+    border-color: black;
+    width: 100%;
+    font-family: "Jost", sans-serif;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: white;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+#LEGO{
+    width: 50px;
+    height: 50px;
+}
+
+.slider-container{
+    width: 5%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin: auto;
+}
+
+.slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.slider-images img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.slider-img{
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height: 480px;
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height: 560px;
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height: 665px;
+}
+
+h1{
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+}
+
+.details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+}
+
+.details h2{
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+}
+
+.details p{
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 33px;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+}
+
+.slider-img.active{
+    width: 766px !important;
+    height: 750px !important;
+}
+
+.slider-img.active h1{
+    display: none;
+}
+
+.slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+}
+
+.slider-images{
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid lightblue;
+    padding: 10px;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+
+.home-content{
+    max-width: 630px;
+}
+
+.home-content h2{
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 40px;
+    color: blue;
+}
+
+.home-content p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+.btn-to-product{
+    display: inline-block;
+    padding: 10px 28px;
+    background: red;
+    border: 2px solid yellow;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-to-product:hover{
+    background: transparent;
+    color: blue;
+}
+
+.home-img{
+    position: relative;
+    right: -7%;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+
+.home-img .rhombus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    border: 25px solid blue;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, rgba(255, 255, 255, 0.2));
+}
+
+.home-img .rhombus #Benny{
+    position: absolute;
+    top: -80px;
+    left: 0px;
+    max-width: 500px;
+    transform: rotate(-45deg);
+}
+
+.home .rhombus2{
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background: yellowgreen;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+#particle{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/b685117a645b151cd8c1aff65edb10f2.jpg);
+    overflow: hidden;
+}
+
+#particle .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/assets/wave.png);
+    background-size: 1000px 100px;
+}
+
+#particle .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+#particle .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+#particle .wave.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+#particle .wave.wave4{
+    animation: animate2 15s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+.footerContainer{
+    background-color: white;
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons .footerIcon{
+    text-decoration: none;
+    padding: 10px;
+    background-color: wheat;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul li a{
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: #111;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+}
